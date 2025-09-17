@@ -5,3 +5,4 @@ byte z=9;
 int x, z, y=5;
 int  x = 5;
 char j='l';
+const int x=1,y=5;

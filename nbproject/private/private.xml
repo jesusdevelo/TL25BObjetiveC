@@ -4,6 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/jesus/OneDrive/Documentos/NetBeansProjects/TL25BObjetiveC%20-%20copia/src/Act4/GeneradorFlexLexico.java</file>
+            <file>file:/C:/Users/jesus/OneDrive/Documentos/NetBeansProjects/TL25BObjetiveC%20-%20copia/src/Act4/sintacticoObjetiveC.cup</file>
+            <file>file:/C:/Users/jesus/OneDrive/Documentos/NetBeansProjects/TL25BObjetiveC%20-%20copia/src/Act4/lexicoObjetiveC.flex</file>
+            <file>file:/C:/Users/jesus/OneDrive/Documentos/NetBeansProjects/TL25BObjetiveC%20-%20copia/src/Act4/Lexico.java</file>
+            <file>file:/C:/Users/jesus/OneDrive/Documentos/NetBeansProjects/TL25BObjetiveC%20-%20copia/src/Act4/sintacticoObjetiveC.txt</file>
+            <file>file:/C:/Users/jesus/OneDrive/Documentos/NetBeansProjects/TL25BObjetiveC%20-%20copia/src/Act4/GeneradorCupSintactico.java</file>
+            <file>file:/C:/Users/jesus/OneDrive/Documentos/NetBeansProjects/TL25BObjetiveC%20-%20copia/src/Act4/AnalizadorSintacticoObjetiveC.java</file>
         </group>
     </open-files>
 </project-private>

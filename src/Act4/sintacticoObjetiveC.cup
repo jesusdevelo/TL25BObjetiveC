@@ -33,7 +33,7 @@ terminal ASIGNACION;
 
 /* NON TERMINALES */
 non terminal declaraciones, dec_variables, dec_var, dec_vars;
-non terminal dec_constantes, dec_cons, dec_con;
+non terminal dec_constantes, dec_cons, dec_con,declaraciones_cons;
 non terminal tipo_dato, valor;
 
 /* INICIO */
@@ -58,6 +58,8 @@ dec_var ::= IDENTIFICADOR ASIGNACION valor
           ;
 
 /* CONSTANTES*/
+declaraciones_cons::=dec_constantes;
+
 dec_constantes ::= CONST tipo_dato dec_cons PUNTOYCOMA ;
 
 dec_cons ::= dec_con
