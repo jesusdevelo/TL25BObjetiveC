@@ -40,14 +40,14 @@ non terminal tipo_dato, valor;
 start with declaraciones;
 
 /* DECLARACIONES*/
-declaraciones ::= dec_variables
+declaraciones ::= dec_variables 
                 | dec_variables declaraciones
-                | declaraciones_cons
+                | declaraciones_cons 
                 | declaraciones_cons declaraciones
                 ;
 
 /* VARIABLES */
-dec_variables ::= tipo_dato dec_vars PUNTOYCOMA ;
+dec_variables ::= tipo_dato dec_vars PUNTOYCOMA;
 
 dec_vars ::= dec_var
            | dec_var COMA dec_vars

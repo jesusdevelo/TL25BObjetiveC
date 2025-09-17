@@ -1,8 +1,19 @@
-
 int variable1 = 5 ;
 int variable2;
 byte z=9;
-int x, z, y=5;
-int  x = 5;
+int x, y=5; 
+char j, t='l';
+double q, w=12;
+float e, r=2.2;
+boolean l;
+int  x = 5; 
 char j='l';
 const int x=1,y=5;
+const double r=25,g=1.356;
+const float r=2.2,e=1.2;
+const byte u=9,o=5;
+const char l=' ';
+const boolean l="";
+
+
+
