@@ -1,0 +1,85 @@
+package act4;
+
+import java_cup.runtime.*;
+import java.io.*;
+
+action code{:
+    public void report_error(String mensaje, Symbol token){
+        System.out.println("Error en la linea: " + token.left + 
+            ", columna: " + token.right + 
+            "-> mensaje->" + mensaje);
+    }
+    
+    public void report_fatal_error(String mensaje, Symbol token){
+        report_error(mensaje,token);
+        System.exit(1);
+    }
+:}
+
+/* TERMINALES */
+terminal INT, BYTE, LONG, FLOAT, BOOLEAN, CHAR, DOUBLE, CONST;
+terminal SHORT, SIGNED, UNSIGNED, AUTO, REGISTER, STATIC, EXTERN, VOID;
+terminal IF, ELSE, FOR, WHILE, DO, SWITCH, CASE, DEFAULT, BREAK, CONTINUE, GOTO, RETURN;
+terminal FALSE, TRUE, NO, YES, IMPORT;
+
+terminal IDENTIFICADOR, ENTERO, FLOTANTE, CADENA, CARACTER, COMENTARIO, COMENTARIO_MULTI;
+
+terminal SUMA, RESTA, MULTIPLICACION, DIVISION, MODULO;
+terminal MENOR, MAYOR, MENORIGUAL, MAYORIGUAL, IGUAL, DIFERENTE;
+terminal AND, OR, NOT;
+
+terminal COR_IZQ, COR_DER, LLAVE_IZQ, LLAVE_DER, PAR_IZQ, PAR_DER, COMA, PUNTO, PUNTOYCOMA;
+terminal ASIGNACION;
+
+/* NON TERMINALES */
+non terminal declaraciones, dec_variables, dec_var, dec_vars;
+non terminal dec_constantes, dec_cons, dec_con;
+non terminal tipo_dato, valor;
+
+/* INICIO */
+start with declaraciones;
+
+/* DECLARACIONES*/
+declaraciones ::= dec_variables
+                | dec_variables declaraciones
+                | declaraciones_cons
+                | declaraciones_cons declaraciones
+                ;
+
+/* VARIABLES */
+dec_variables ::= tipo_dato dec_vars PUNTOYCOMA ;
+
+dec_vars ::= dec_var
+           | dec_var COMA dec_vars
+           ;
+
+dec_var ::= IDENTIFICADOR ASIGNACION valor
+          | IDENTIFICADOR
+          ;
+
+/* CONSTANTES*/
+dec_constantes ::= CONST tipo_dato dec_cons PUNTOYCOMA ;
+
+dec_cons ::= dec_con
+           | dec_con COMA dec_cons
+           ;
+
+dec_con ::= IDENTIFICADOR ASIGNACION valor ;
+
+/* TIPOS Y VALORES*/
+tipo_dato ::= INT 
+            | BYTE 
+            | LONG 
+            | FLOAT 
+            | BOOLEAN 
+            | CHAR 
+            | DOUBLE
+            ;
+
+valor ::= ENTERO
+       | FLOTANTE
+       | CADENA
+       | CARACTER
+       | TRUE
+       | FALSE
+       ;

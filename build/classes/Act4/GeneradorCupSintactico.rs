@@ -1,0 +1,3 @@
+sintactico.Generador
+sintactico.GeneradorCupSintactico
+act4.GeneradorCupSintactico

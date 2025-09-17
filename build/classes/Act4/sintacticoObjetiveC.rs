@@ -1,0 +1,4 @@
+sintacticoObjetiveC
+act4.CUP$sintacticoObjetiveC$actions
+act4.sintacticoObjetiveC
+CUP$sintacticoObjetiveC$actions
